@@ -41,10 +41,13 @@ class UserRegistrationForm(UserCreationForm):
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control py-4', 'placeholder': 'Подтвердите пароль'
     }))
+    is_instructor = forms.BooleanField(widget=forms.CheckboxInput(attrs={
+        'class': 'form-cher-input', 'placeholder': 'test'
+    }))
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2')
+        fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2', 'is_instructor')
 
     def save(self, commit=True):
         user = super(UserRegistrationForm, self).save(commit=True)

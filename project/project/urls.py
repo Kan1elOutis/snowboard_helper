@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
     path('products/', include('products.urls', namespace='products')),
+    path('resumes/', include('resumes.urls', namespace='resumes')),
     path('users/', include('users.urls', namespace='users')),
     path('accounts/', include('allauth.urls')),
 ]

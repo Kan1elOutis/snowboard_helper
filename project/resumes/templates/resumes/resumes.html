@@ -1,0 +1,100 @@
+{% extends 'products/base.html'%}
+
+{%block css%}
+    <link href="/static/vendor/css/products.css" rel="stylesheet">
+{%endblock%}
+
+{%block content%}
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-3">
+
+            <h1 class="my-4">Resume</h1>
+            <div class="list-group">
+                {% for riding_style in riding_stylies %}
+                <a href="{% url 'resumes:riding_style' riding_style.id %}" class="list-group-item">
+                    {{ riding_style.name }}
+                </a>
+                {% endfor %}
+            </div>
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+
+            <div class="row">
+
+                {% for resume in object_list %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#">
+                            <img class="card-img-top"
+                                 src="{{ resume.image.url}}"
+                                 alt="">
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">{{ resume.name }}</a>
+                            </h4>
+                            <h5>{{ resume.price }} руб.</h5>
+                            <p class="card-text">{{ resume.description }}</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a  class="btn btn-outline-success" href="">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+            </div>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item {% if not page_obj.has_previous %} disabled {%endif%}">
+                        <a class="page-link"
+                           href="{% if page_obj.has_previous%} {% url 'resumes:paginator' page_obj.previous_page_number%} {% else %} # {% endif %}"
+                           tabindex="-1" aria-disabled="true">Предыдущая</a>
+                    </li>
+                    {% for page in resumes.page_range %}
+                       <li class="page-item">
+                           <a class="page-link" href="{% url 'resumes:paginator' page %}">
+                               {{ page }}
+                           </a>
+                       </li>
+                    {% endfor%}
+
+                    <li class="page-item {% if not page_obj.has_next %} disabled {% endif %}">
+                        <a class="page-link"
+                           href="{% if page_obj.has_next %} {% url 'resumes:paginator' page_obj.next_page_number%} {% else %} # {% endif %}">
+                            Следующая
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+</div>
+
+{%endblock%}
+{%block footer%}
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Store 2022</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+{%endblock%}
+
+
