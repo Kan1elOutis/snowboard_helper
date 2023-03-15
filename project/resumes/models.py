@@ -14,8 +14,8 @@ class RidingStyle(models.Model):
 
 
 class Resume(models.Model):
-    first_name = models.CharField(max_length=256, unique=True)
-    last_name = models.CharField(max_length=256, unique=True)
+    first_name = models.CharField(max_length=256, default='Иван')
+    last_name = models.CharField(max_length=256, default='Иванов')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='products_images')
@@ -26,4 +26,4 @@ class Resume(models.Model):
         verbose_name_plural = 'resumes'
 
     def __str__(self):
-        return f'Резюме: {self.name} | Стиль катания: {self.riding_style.name}'
+        return f'Резюме: {self.first_name} {self.last_name} | Стиль катания: {self.riding_style.name}'

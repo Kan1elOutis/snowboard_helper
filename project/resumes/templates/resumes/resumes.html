@@ -1,7 +1,7 @@
 {% extends 'products/base.html'%}
 
 {%block css%}
-    <link href="/static/vendor/css/products.css" rel="stylesheet">
+<link href="/static/vendor/css/products.css" rel="stylesheet">
 {%endblock%}
 
 {%block content%}
@@ -11,7 +11,7 @@
 
         <div class="col-lg-3">
 
-            <h1 class="my-4">Resume</h1>
+            <h1 class="my-4">Инструктора</h1>
             <div class="list-group">
                 {% for riding_style in riding_stylies %}
                 <a href="{% url 'resumes:riding_style' riding_style.id %}" class="list-group-item">
@@ -44,14 +44,13 @@
                             <p class="card-text">{{ resume.description }}</p>
                         </div>
                         <div class="card-footer text-center">
-                            <a  class="btn btn-outline-success" href="">
+                            <a class="btn btn-outline-success" href="">
                                 Подробнее
                             </a>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
-
 
 
             </div>
@@ -64,11 +63,11 @@
                            tabindex="-1" aria-disabled="true">Предыдущая</a>
                     </li>
                     {% for page in resumes.page_range %}
-                       <li class="page-item">
-                           <a class="page-link" href="{% url 'resumes:paginator' page %}">
-                               {{ page }}
-                           </a>
-                       </li>
+                    <li class="page-item">
+                        <a class="page-link" href="{% url 'resumes:paginator' page %}">
+                            {{ page }}
+                        </a>
+                    </li>
                     {% endfor%}
 
                     <li class="page-item {% if not page_obj.has_next %} disabled {% endif %}">

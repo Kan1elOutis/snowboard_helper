@@ -1,14 +1,15 @@
 import os
+
 import django
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'project.settings')
 django.setup()
 
 from http import HTTPStatus
-
 from unittest import TestCase
-from django.urls import reverse
+
 from django.test import Client
+from django.urls import reverse
 
 
 class IndexViewTestCase(TestCase):
