@@ -12,6 +12,21 @@ class IndexView(TitleMixin, TemplateView):
     title = 'SibDoski'
 
 
+class SnowboardsView(TitleMixin, TemplateView):
+    template_name = 'equip/snowboard.html'
+    title = 'SibDoski'
+
+
+class BootsView(TitleMixin, TemplateView):
+    template_name = 'equip/boots.html'
+    title = 'SibDoski'
+
+
+class BracingView(TitleMixin, TemplateView):
+    template_name = 'equip/bracing.html'
+    title = 'SibDoski'
+
+
 # def index(request):
 #     context = {'title': 'SibDoski', }
 #     return render(request, 'products/index.html', context)
