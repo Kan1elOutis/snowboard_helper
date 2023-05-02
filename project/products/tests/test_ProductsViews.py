@@ -2,8 +2,6 @@ import os
 
 import django
 
-from products.models import Product
-
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'project.settings')
 django.setup()
 

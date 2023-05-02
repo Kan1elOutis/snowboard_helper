@@ -27,10 +27,6 @@ class BracingView(TitleMixin, TemplateView):
     title = 'SibDoski'
 
 
-# def index(request):
-#     context = {'title': 'SibDoski', }
-#     return render(request, 'products/index.html', context)
-
 class ProductsListView(TitleMixin, ListView):
     model = Product
     template_name = 'products/products.html'
@@ -47,26 +43,6 @@ class ProductsListView(TitleMixin, ListView):
         context['categories'] = ProductCategory.objects.all()
         return context
 
-
-# def products(request, category_id=None, page_number=1):
-#     products = Product.objects.filter(category_id=category_id) if category_id else Product.objects.all()
-#     per_page = 1
-#     paginator = Paginator(products, per_page)
-#     products_paginator = paginator.page(page_number)
-#
-#     context = {'title': 'SibDoski - Каталог',
-#                'categories': ProductCategory.objects.all(),
-#                'products': products_paginator,
-#                }
-#
-#     return render(request, 'products/products.html', context)
-
-# class BasketCreateView(CreateView): #Смысла переводить в класс нет
-#     model = Basket
-#
-#     def post(self, request, *args, **kwargs):
-#         product = Product.objects.get(id=self.kwargs.get('product_id'))
-#         baskets =
 
 @login_required
 def basket_add(request, product_id):

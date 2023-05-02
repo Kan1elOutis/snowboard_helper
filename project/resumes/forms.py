@@ -1,6 +1,5 @@
 from django import forms
 
-import resumes.models
 from resumes.models import Resume, RidingStyle
 
 
@@ -22,13 +21,7 @@ class ResumeCreatingForm(forms.ModelForm):
         'placeholder': 'О себе'
     }))
     image = forms.ImageField(widget=forms.FileInput(attrs={'class': 'custom-file-input'}), required=False)
-    # riding_style = forms.ChoiceField(label='Style', choices=STYLE_CHOICES)
-
     riding_style = forms.ModelChoiceField(queryset=RidingStyle.objects.all())
-
-    # riding_style = forms.ChoiceField(widget=forms.RadioSelect,
-    #                                  choices=[(style.name, style) for style in RidingStyle.objects.filter()]
-    #                                  )
 
     class Meta:
         model = Resume

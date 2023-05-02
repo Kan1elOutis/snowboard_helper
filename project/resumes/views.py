@@ -11,7 +11,7 @@ from resumes.models import Resume, RidingStyle
 class RidingStyleListView(TitleMixin, ListView):
     model = Resume
     template_name = 'resumes/resumes.html'
-    paginate_by = 3
+    paginate_by = 2
     title = 'SibDoski - Резюме'
 
     def get_queryset(self):
@@ -30,5 +30,5 @@ class ResumeCreatingView(TitleMixin, SuccessMessageMixin, CreateView):
     form_class = ResumeCreatingForm
     template_name = 'resumes/creating_resume.html'
     success_url = reverse_lazy('resumes:index')
-    success_message = 'Вы успешно зарегистрировались!'
-    title = 'SibDoski - Регистрация'
+    success_message = 'Вы успешно создали резюме!'
+    title = 'SibDoski - Создание резюме'

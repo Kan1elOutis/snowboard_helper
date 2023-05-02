@@ -10,10 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = os.path.dirname(__file__)
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'models'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -26,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+DOMAIN_NAME = 'http://127.0.0.1:8000'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -36,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.humanize',
 
     'allauth',
     'allauth.account',
@@ -45,6 +51,7 @@ INSTALLED_APPS = [
     'products',
     'users',
     'resumes',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -170,3 +177,9 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
     }
 }
+
+# Stripe
+
+STRIPE_PUBLIC_KEY = 'pk_test_51N0g95Lew8paDxPgLWLFBOtvDuRx7RB5LrqCX9WOnrLhuxPM8ODGw57YBgv25SLA3mnJmiyxGkpTdrfR7MCYaHm000Wm3GwwtK'
+STRIPE_SECRET_KEY = 'sk_test_51N0g95Lew8paDxPg1fiVXjirF3mk7fudKVoj6FqjeBDYbwnIStLKYQN2siFDt7Z6kKbXSl6JIBEUfy6j2HxDAZbX003gt5ryGS'
+STRIPE_WEBHOOK_SECRET = 'whsec_7c6b29fcca8d3d2cf6168a38fcbacf5f420c981e9329826f3876c4da67197486'

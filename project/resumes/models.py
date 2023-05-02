@@ -18,7 +18,7 @@ class Resume(models.Model):
     last_name = models.CharField(max_length=256, default='Иванов')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(upload_to='products_images')
+    image = models.ImageField(upload_to='resumes_images')
     riding_style = models.ForeignKey(to=RidingStyle, on_delete=models.CASCADE)
 
     class Meta:

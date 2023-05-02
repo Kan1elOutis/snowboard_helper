@@ -1,12 +1,13 @@
 {% extends 'products/base.html'%}
-
+{% load static %}
 {%block css%}
 <link href="/static/vendor/css/products.css" rel="stylesheet">
+<!-- стили модального окна -->
+<link rel="stylesheet" href="/static/vendor/css/style-modal.css" rel="stylesheet">
 {%endblock%}
 
 {%block content%}
 <div class="container">
-
     <div class="row">
 
         <div class="col-lg-3">
@@ -21,30 +22,27 @@
             </div>
 
         </div>
-        <!-- /.col-lg-3 -->
 
         <div class="col-lg-9">
 
-
-            <div class="row">
-
+                <div class="row">
                 {% for resume in object_list %}
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <a href="#">
                             <img class="card-img-top"
-                                 src="{{ resume.image.url}}"
+                                 src="{% if resume.image %} {{ resume.image.url }} {% else %} {% static 'vendor/img/users/default_avatar.jpg' %} {% endif %}"
                                  alt="">
                         </a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">{{ resume.name }}</a>
+                                <a href="#">{{ resume.first_name }}  {{ resume.last_name }}</a>
                             </h4>
                             <h5>{{ resume.price }} руб.</h5>
                             <p class="card-text">{{ resume.description }}</p>
                         </div>
                         <div class="card-footer text-center">
-                            <a class="btn btn-outline-success" href="">
+                            <a class="btn btn-outline-success" href="#win1">
                                 Подробнее
                             </a>
                         </div>
@@ -62,12 +60,12 @@
                            href="{% if page_obj.has_previous%} {% url 'resumes:paginator' page_obj.previous_page_number%} {% else %} # {% endif %}"
                            tabindex="-1" aria-disabled="true">Предыдущая</a>
                     </li>
-                    {% for page in resumes.page_range %}
-                    <li class="page-item">
-                        <a class="page-link" href="{% url 'resumes:paginator' page %}">
-                            {{ page }}
-                        </a>
-                    </li>
+                    {% for page in paginator.page_range %}
+                        <li class="page-item">
+                            <a class="page-link" href="{% url 'resumes:paginator' page %}">
+                                {{ page }}
+                            </a>
+                        </li>
                     {% endfor%}
 
                     <li class="page-item {% if not page_obj.has_next %} disabled {% endif %}">
@@ -82,10 +80,30 @@
         </div>
 
     </div>
-
 </div>
+    <div class="popup">
+</div>
+<a href="#x" class="overlay" id="win1"></a>
+        <div class="popup">
+            <div class="pic-left">
+                <a href="#"><img src="{% static 'vendor/img/test.jpeg' %}" alt="Тест" /></a>
+            </div>
+            <h2></h2>
+			<p>
+            <h2>Иван Иванов</h2>
+            <h3 style="text-align: center;">Цена за час - 3000 руб.</h3>
 
+
+			<p>
+			Имею большой опыт катания. Обучу технике катания грамотно и безболезненно.
+            Текст для массовкиТекст для массовкиТекст для массовкиТекст для массовки
+                Текст для массовкиТекст для массовкиТекст для массовкиТекст для массовкиТекст для массовки
+                Текст для массовкиТекст для массовкиТекст для массовки
+
+        </div>
 {%endblock%}
+
+
 {%block footer%}
 <footer class="py-5 bg-dark">
     <div class="container">
@@ -95,5 +113,3 @@
 </footer>
 
 {%endblock%}
-
-
