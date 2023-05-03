@@ -35,25 +35,26 @@
                 <div class="nav-item">
                     <button onclick="myFunction()" class="nav-btn">Места катания</button>
                     <div id="MyNavDown" class="nav-content">
-                        <a href="static/places/krasnoyarsk.html">Красноярск</a>
-                        <a href="divnogorsk.html">Дивногорск</a>
-                        <a href="sheregesh.html">Шерегеш</a>
+                        <a href="{% url 'krsk'%}">Красноярск</a>
+                        <a href="{% url 'divnogorsk'%}">Дивногорск</a>
+                        <a href="{% url 'sheregesh'%}">Шерегеш</a>
                     </div>
                 </div>
                 <div class="nav-item">
                     <button onclick="myFunction2()" class="nav-btn">Снаряжение</button>
                     <div id="MyNavDown2" class="nav-content">
+                        <a href="{% url 'boots' %}">Экипировка</a>
                         <a href="{% url 'snowboards' %}">Выбор сноуборда</a>
-                        <a href="{% url 'boots' %}">Выбор ботинок</a>
-                        <a href="{% url 'bracing' %}">Выбор креплений</a>
+                        <a href="{% url 'gloves' %}">Выбор перчаток</a>
+                        <a href="{% url 'glases' %}">Выбор маски</a>
                     </div>
                 </div>
                 <div class="nav-item">
                     <button onclick="myFunction3()" class="nav-btn">Техника</button>
                     <div id="MyNavDown3" class="nav-content">
-                        <a href="#">что-то раз</a>
-                        <a href="#">что-то два</a>
-                        <a href="#">что-то три</a>
+                        <a href="{% url 'freeride' %}">Фрирайд</a>
+                        <a href="{% url 'freestyle' %}">Фристайл</a>
+                        <a href="{% url 'carving' %}">Карвинг</a>
                     </div>
                 </div>
                 <li class="nav-item">

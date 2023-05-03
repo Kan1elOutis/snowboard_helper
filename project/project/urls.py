@@ -19,14 +19,22 @@ from django.contrib import admin
 from django.urls import include, path
 
 from orders.views import stripe_webhook_view
-from products.views import IndexView, SnowboardsView, BootsView, BracingView
+from products.views import IndexView, SnowboardsView, BootsView, GlasesView, GlovesView, KrasnoyarskView, SheregeshView, \
+    DivnogorskView, FreestyleView, FreerideView, CarvingView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
     path('snowboards/', SnowboardsView.as_view(), name='snowboards'),
     path('boots/', BootsView.as_view(), name='boots'),
-    path('bracing/', BracingView.as_view(), name='bracing'),
+    path('bracing/', GlasesView.as_view(), name='glases'),
+    path('gloves/', GlovesView.as_view(), name='gloves'),
+    path('krasnoyarsk/', KrasnoyarskView.as_view(), name='krsk'),
+    path('divnogorsk/', DivnogorskView.as_view(), name='divnogorsk'),
+    path('sheregesh/', SheregeshView.as_view(), name='sheregesh'),
+    path('freestyle/', FreestyleView.as_view(), name='freestyle'),
+    path('freeride/', FreerideView.as_view(), name='freeride'),
+    path('carving/', CarvingView.as_view(), name='carving'),
     path('products/', include('products.urls', namespace='products')),
     path('resumes/', include('resumes.urls', namespace='resumes')),
     path('users/', include('users.urls', namespace='users')),

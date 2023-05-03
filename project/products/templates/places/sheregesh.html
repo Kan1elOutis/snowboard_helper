@@ -1,279 +1,636 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'products/base.html'%}
 
-<head>
+{%block css%}
+<link href="/static/vendor/css/snowboards.css" rel="stylesheet">
+{%endblock%}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Store - Каталог</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="vendor/css/products.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Store</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="products.html">Каталог <i class="fas fa-shopping-bag"></i> </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="users/login.html">Войти <i class="fas fa-sign-in-alt"></i></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="users/profile.html">Профиль</a>
-                        </li>
-                        <li><a class="dropdown-item" href="orders/orders.html">Заказы</a></li>
-                        <li><a class="dropdown-item" href="#">Админ-панель</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Выйти
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+{% block content %}
 
 <!-- Page Content -->
-<div class="container">
+<section>
+    <div class="b-container">
+        <div class="b-head-ill_left">
+            <div class="b-head-ill_right">
+                <table class="l-head">
+                    <tbody>
+                    <tr>
+                        <td class="l-head-g"><i></i></td>
+                        <td class="l-head-l">
+                            <div class="sticky-navigation-container">
+                                <div class="sticky-wrapper" style="height: 59px;">
+                                    <div class="sticky-navigation stuck">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="l-head-g"><i></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="l-page">
+                    <tbody>
+                    <tr>
+                        <td class="l-page-g"><i></i></td>
+                        <td class="l-page-l">
 
-    <div class="row">
+                            <div class="b-page-title"><h1>ГЛК "Шерегеш"</h1></div>
 
-        <div class="col-lg-3">
 
-            <h1 class="my-4">Store</h1>
-            <div class="list-group">
-                <a href="#" class="list-group-item">Новинки</a>
-                <a href="#" class="list-group-item">Одежда</a>
-                <a href="#" class="list-group-item">Обувь</a>
-                <a href="#" class="list-group-item">Аксессуары</a>
-                <a href="#" class="list-group-item">Подарки</a>
+                            <table width="100%" cellspacing="10" cellpadding="0" border="0">
+                                <tbody>
+                                <tr>
+                                    <td valign="top">
+                                        <table cellspacing="5" border="0">
+                                            <tbody>
+                                            <tr>
+                                                <td valign="top"><b>Регион:</b></td>
+                                                <td><a href="/regions/1">Россия</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Область:</b></td>
+                                                <td>District object (16)</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Кол-во трасс:</b></td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Перепад высот:</b></td>
+                                                <td>700 м</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td valign="top"><b>Подъемники:</b></td>
+                                                <td>Всего 15 :
+                                                    - 9 бугельных подъемников
+                                                    - 3 кресельных
+                                                    - 1 гондольно-кресельная канатная дорога
+                                                    - 2 гондольные канатные дороги
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td valign="top"><b>Ночное катание:</b></td>
+                                                <td>Нет</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Услуги:</b></td>
+                                                <td>Рестораны и кафе у подножья и на вершине горы Зелёная. Столовая,
+                                                    бар.
+                                                    Боулинг-центр (12 дорожек), бильярд. Диско-клуб. Сауны, русские
+                                                    бани.
+                                                    Конные прогулки на т/б "Медвежонок" (верховые и санные). Вертолетные
+                                                    экскурсии, прогулки на снегоходах, параглайдинг, равнинные лыжи..
+                                                    Цены
+                                                    везде довольно высоки для России, но не запредельны.
+
+                                                    Что посмотреть: Шорский национальный парк, Таштагольский заказник
+                                                    (охрана соболя), музей природы и этнографии Горной Шории (г.
+                                                    Таштагол),
+                                                    музей под открытым небом «Тазгол» (пос. Усть-Анзас).
+                                                </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                        <br>
+
+                                        <br><br>
+
+
+                                        <p>
+
+
+                                            Шерегеш — это небольшой горняцкий поселок и рудник, расположенный в Горной
+                                            Шории
+                                            на юге Кемеровской области. Здесь, на стыке Алтая и Саян, открывается
+                                            панорама
+                                            заснеженных гольцовых склонов массива Мустаг. Мустаг — высочайшая вершина
+                                            Шорского хребта, богатого курумами и скалами-останцами. Это одно из
+                                            удивительнейших мест в Сибири — с чистой, нетронутой природой и
+                                            по-настоящему
+                                            сибирским гостеприимством. Таким, как в Шерегеше, «пухляком» располагают
+                                            немногие горнолыжные курорты мира. Одно из самых любопытных занятий для
+                                            профессионалов — катание по снежной целине в лесу, а также на склонах
+                                            массива
+                                            Мустаг, куда осуществляется доставка снегоходами и вертолетами.
+                                            <br>
+                                            <br>
+                                            Устойчивый снежный покров держится с ноября по десятые числа мая. В среднем
+                                            толщина снежного покрова составляет 120 см. Снег уникальный - легкий и
+                                            летящий
+                                            "холодный" снег, которым могут похвастаться немногие горнолыжные курорты
+                                            мира.
+                                            <br>
+                                            <br>
+                                            Инфpаструктура СТК Шерегеш
+                                            <br>
+                                            <br>
+                                            Сектор А:
+                                            <br>
+                                            - Гостиницы от туркласса до апартаментов – более 30 отелей, общей
+                                            вместимостью
+                                            свыше 1500 человек.
+                                            <br>
+                                            - Девять горнолыжных трасс (две трассы "Шория-Тур" имеют сертификаты ФИС)
+                                            <br>
+                                            - Восемь бугельных подъемников
+                                            <br>
+                                            - Три кресельные канатные дороги (2-х и 4-х местные)
+                                            <br>
+                                            - Гондольная и гондольно-кресельная канатные дороги
+                                            <br>
+                                            - Школа горных лыж и сноуборда
+                                            <br>
+                                            - Детские лыжные ясли
+                                            <br>
+                                            - Трасса для сноутьюбинга с подъемником
+                                            <br>
+                                            - Кафе у подножия и на вершине г. Зелёная
+                                            <br>
+                                            - Развлекательный комплекс "Куба"
+                                            <br>
+                                            - Развлекательный комплекс «Дизель»
+                                            <br>
+                                            - Сауны, русские бани
+                                            <br>
+                                            - Сеть прокатов горнолыжного снаряжения и инвентаря
+                                            <br>
+                                            - Междугородная телефонная связь (гостиница "Мустаг")
+                                            <br>
+                                            - Магазины спортивного инвентаря и снаряжения
+                                            <br>
+                                            - Прогулки на снегоходах
+                                            <br>
+                                            <br>
+                                            Сектор Е
+                                            <br>
+                                            - Две горнолыжные трассы (одна имеет искусственное оснежение)
+                                            <br>
+                                            - Гондольная канатная дорога
+                                            <br>
+                                            - Бугельная канатная дорога
+                                            <br>
+                                            - Пункт питания
+                                            <br>
+                                            - Кассы канатных дорог
+                                            <br>
+                                            <br>
+                                            п. Шерегеш
+                                            <br>
+                                            - Гостиница «Шория»
+                                            <br>
+                                            - Ресторан «Шория»
+                                            <br>
+                                            - Профилакторий «Шерегешский»
+                                            <br>
+                                            - Открытые автостоянки
+                                            <br>
+                                            - Сауны, русские бани
+                                            <br>
+                                            <br>
+                                            Турбаза «Медвежонок»
+                                            <br>
+                                            - Гостиница "Медвежонок"
+                                            <br>
+                                            - Две горнолыжные трассы
+                                            <br>
+                                            - Бугельный подъемник
+                                            <br>
+                                            - Прокат горнолыжного снаряжения и инвентаря
+                                            <br>
+                                            - Трасса для сноутьюбинга с подъемником
+                                            <br>
+                                            - Конные прогулки
+                                            <br>
+                                            - Столовая
+                                            <br>
+                                            - Сауны
+                                            <br>
+                                            <br>
+                                            Характеристика подъемников
+                                            <br>
+                                            <br>
+                                        <table width="800" height="432" cellspacing="1" cellpadding="3" border="1"
+                                               align="center">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        <strong>
+                                                            протяженность
+                                                        </strong>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        <strong>
+                                                            время подъема
+                                                        </strong>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Нижний бугель "Шория-Тур"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        1000 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        5 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Верхний бугель "Шория-Тур"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        1000 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        5 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        ППКД "Шория-Тур"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        1980 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        20 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Гондольная "Сектор Е"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        3200 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        9 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Бугель "Сектор Е"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        960 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        9 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Гондольно-кресельная "Панорама"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        1500 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        6 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Нижний бугель "Sky Way"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        1400 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        8 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Гондольная "Sky Way" (пуск 2008 г.)
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        2500 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        12 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Верхний бугель "Sky Way"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        1400 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        8 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Малый бугель "Спортотель"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        650 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        3 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Малая ППКД "Спортотель"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        650 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        4 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Бугель "Фристайл"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        850 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        8 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Нижний бугель "Каскад-Подъем"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        600 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        4 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        Верхний бугель "Каскад-Подъем"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        980 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        7 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        ППКД "Каскад-Подъем"
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        1700 м
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <br>
+                                                    <div>
+                                                        11 мин
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <br>
+                                        Как добраться:
+                                        <br>
+                                        <br>
+                                        Добраться можно любым транспортным средством: самолетом, поездом, автомобилем.
+                                        <br>
+                                        <br>
+                                        Самолетом:
+                                        <br>
+                                        <br>
+                                        Удобнее всего прилететь в Кемерово или Новокузнецк. Ближайший аэропорт (200 км)
+                                        находится в г. Новокузнецк и значительно дальше - в г. Кемерово (400 км).
+                                        <br>
+                                        <br>
+                                        В Кемерово и Новокузнецке можно заказать (лучше заранее) микроавтобус или такси,
+                                        либо сесть на рейсовый автобус до г. Таштагол, где, по прибытии, берете такси
+                                        (около
+                                        500 руб машина) до поселка Шерегеш (около 30 км), если собираетесь снимать
+                                        квартиру,
+                                        либо до самой горы, если вы предпочитаете проживать в гостинице. Расстояние
+                                        между
+                                        Шерегешем и горой около 3 км. Микроавтобус идет от аэропорта до Шерегеша около 4
+                                        часов. Учитывайте высокую вероятность снежных заносов при планировании времени
+                                        на
+                                        обратный путь. Дорога идет через перевалы.
+                                        <br>
+                                        <br>
+                                        Поездом:
+                                        <br>
+                                        <br>
+                                        На поезде удобнее всего приехать в г. Новокузнецк. Далее схема действия та же,
+                                        что и
+                                        в случае с самолетом.
+                                        <br>
+                                        <br>
+                                        Неофициальные сайты:
+                                        <a href="http://www.mustag.ru/" rel="nofollow">
+                                            http://www.mustag.ru/
+                                        </a>
+                                        ,
+                                        <a href="http://gesh.info/" rel="nofollow">
+                                            http://gesh.info/
+                                        </a>
+                                        .
+
+                                        </p>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+
+                        </i></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
             </div>
-
         </div>
-        <!-- /.col-lg-3 -->
-
-        <div class="col-lg-9">
-
-            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="vendor/img/slides/slide-1.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block img-fluid" src="vendor/img/slides/slide-2.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block img-fluid" src="vendor/img/slides/slide-3.jpg" alt="Third slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#">
-                            <img class="card-img-top"
-                                 src="vendor/img/products/Adidas-hoodie.png"
-                                 alt="">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Худи черного цвета с монограммами adidas Originals</a>
-                            </h4>
-                            <h5>6 090,00 руб.</h5>
-                            <p class="card-text">Мягкая ткань для свитшотов. Стиль и комфорт – это образ жизни.</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#">
-                            <img class="card-img-top"
-                                 src="vendor/img/products/Blue-jacket-The-North-Face.png" alt="">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Синяя куртка The North Face</a>
-                            </h4>
-                            <h5>23 725,00 руб.</h5>
-                            <p class="card-text">
-                                Гладкая ткань. Водонепроницаемое покрытие. Легкий и теплый пуховый наполнитель.
-                            </p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#">
-                            <img class="card-img-top"
-                                 src="vendor/img/products/Brown-sports-oversized-top-ASOS-DESIGN.png"
-                                 alt="">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Коричневый спортивный oversized-топ ASOS DESIGN</a>
-                            </h4>
-                            <h5>3 390,00 руб.</h5>
-                            <p class="card-text">Материал с плюшевой текстурой. Удобный и мягкий.</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#">
-                            <img class="card-img-top"
-                                 src="vendor/img/products/Black-Nike-Heritage-backpack.png"
-                                 alt="">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Черный рюкзак Nike Heritage</a>
-                            </h4>
-                            <h5>2 340,00 руб.</h5>
-                            <p class="card-text">Плотная ткань. Легкий материал.</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#">
-                            <img class="card-img-top"
-                                 src="vendor/img/products/Black-Dr-Martens-shoes.png"
-                                 alt="">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex</a>
-                            </h4>
-                            <h5>13 590,00 руб.</h5>
-                            <p class="card-text">Гладкий кожаный верх. Натуральный материал.</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#">
-                            <img class="card-img-top"
-                                 src="vendor/img/products/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png"
-                                 alt="">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Темно-синие широкие строгие брюки ASOS DESIGN</a>
-                            </h4>
-                            <h5>2 890,00 руб.</h5>
-                            <p class="card-text">Легкая эластичная ткань сирсакер Фактурная ткань.</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-
     </div>
+    >
+</section>>
 
-</div>
-<!-- /.container -->
+{% endblock %}
 
-<!-- Footer -->
+{%block footer%}
 <footer class="py-5 bg-dark">
     <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Store 2022</p>
     </div>
     <!-- /.container -->
 </footer>
-
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+
 <!-- FontAwesome script -->
-<script src="vendor/fontawesome/fontawesome-icons.js" crossorigin="anonymous"></script>
+<script src="../vendor/fontawesome/fontawesome-icons.js"
+        crossorigin="anonymous"></script>
 
 </body>
 
 </html>
+{%endblock%}
+
+

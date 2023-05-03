@@ -1,115 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'products/base.html'%}
 
-<head>
+{%block css%}
+<link href="/static/vendor/css/snowboards.css" rel="stylesheet">
+{%endblock%}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Store - Каталог</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="vendor/css/products.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">SibDoski</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">     
-                <div class="nav-item">
-                    <button onclick="myFunction()" class="nav-btn">Места катания</button>
-                    <div id="MyNavDown" class="nav-content">
-                      <a href="krasnoyarsk.html">Красноярск</a>
-                      <a href="divnogorsk.html">Дивногорск</a>
-                      <a href="sheregesh.html">Шерегеш</a>
-                    </div>
-                  </div>   
-                <div class="nav-item">
-                    <button onclick="myFunction2()" class="nav-btn">Снаряжение</button>
-                    <div id="MyNavDown2" class="nav-content">
-                      <a href="#">Выбор сноуборда</a>
-                      <a href="#">Выбор ботинок</a>
-                      <a href="#">Выбор креплений</a>
-                    </div>
-                  </div> 
-                  <div class="nav-item">
-                    <button onclick="myFunction3()" class="nav-btn">Техника</button>
-                    <div id="MyNavDown3" class="nav-content">
-                      <a href="#">что-то раз</a>
-                      <a href="#">что-то два</a>
-                      <a href="#">что-то три</a>
-                    </div>
-                  </div> 
-                <li class="nav-item">
-                    <a class="nav-link" href="products.html">Форум <i class="fas fa-shopping-bag"></i> </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="users/login.html">Войти <i class="fas fa-sign-in-alt"></i></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="users/profile.html">Профиль</a>
-                        </li>
-                        <li><a class="dropdown-item" href="orders/orders.html">Заказы</a></li>
-                        <li><a class="dropdown-item" href="#">Админ-панель</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Выйти
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+{% block content %}
 
 <!-- Page Content -->
+<section>
+    <div class="b-container">
+        <div class="b-head-ill_left">
+            <div class="b-head-ill_right">
+                <table class="l-head">
+                    <tbody>
+                    <tr>
+                        <td class="l-head-g"><i></i></td>
+                        <td class="l-head-l">
+                            <div class="sticky-navigation-container">
+                                <div class="sticky-wrapper" style="height: 59px;">
+                                    <div class="sticky-navigation stuck">
 
 
-<!-- /.container -->
 
-<!-- Footer -->
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="l-head-g"><i></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <table class="l-page">
+                    <tbody>
+                    <tr>
+                        <td class="l-page-g"><i></i></td>
+                        <td class="l-page-l">
+
+                            <div class="b-page-title"><h1>ГЛК "Бобровый лог"</h1></div>
+
+
+                            <table width="100%" cellspacing="10" cellpadding="0" border="0">
+                                <tbody>
+                                <tr>
+                                    <td valign="top">
+                                        <table cellspacing="5" border="0">
+                                            <tbody>
+                                            <tr>
+                                                <td valign="top"><b>Регион:</b></td>
+                                                <td><a href="/regions/1">Россия</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Область:</b></td>
+                                                <td>District object (8)</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Кол-во трасс:</b></td>
+                                                <td>14</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Перепад высот:</b></td>
+                                                <td>350 м</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td valign="top"><b>Подъемники:</b></td>
+                                                <td>Подъемники – 2 кресельных (4-х местные "Доппельмайер"), 2-х местная
+                                                    буксировочная дорога, безопорные лифты.
+
+                                                    Общая пропускная способность - 5100 чел./час
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td valign="top"><b>Ночное катание:</b></td>
+                                                <td>Зимой фанпарк работает до 22:00.</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Услуги:</b></td>
+                                                <td>После катания:
+                                                    Комплекс питания в ФП "Бобровый лог" (рестораны, бары). Шатры бары
+                                                    на
+                                                    горе.
+                                                    Все развлечения – от боулинга и ресторанов до оперного театра и
+                                                    органного зала – в Красноярске.
+                                                    Совсем рядом знаменитый заповедник "Столбы".
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Адрес:</b></td>
+                                                <td>660006, Россия, г. Красноярск, ул. Сибирская, 92</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Сайт:</b></td>
+                                                <td><a href="http://www.bobrovylog.ru/" rel="nofollow">http://www.bobrovylog.ru/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top"><b>Телефоны:</b></td>
+                                                <td>+7(391) 256-86-86</td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                        <br>
+
+
+                                        <p>
+
+
+                                            Фанпарк «Бобровый лог» занимает территорию свыше 80 га. Комплекс расположен
+                                            в
+                                            одном из живописных мест города Красноярска, в районе реки Базаиха и
+                                            граничит с
+                                            природным заповедником «Столбы». Фанпарк «Бобровый лог» является
+                                            единственным за
+                                            Уралом всесезонным комплексом, который работает в формате горнолыжного
+                                            комплекса
+                                            зимой и парка отдыха и развлечений летом и в межьсезонье. Горнолыжный сезон
+                                            на
+                                            комплексе длится 6 месяцев.
+                                            <br>
+                                            <br>
+                                            <br>
+                                            Как добраться:
+                                            <br>
+                                            Авиаперелет в аэропорт Емельяново г. Красноярска;
+                                            <br>
+                                            Поездом до железнодорожной станции «Красноярск»;
+                                            <br>
+                                            функционируют специальные рейсовые фирменные автобусы по маршруту №37 «Ж/д
+                                            вокзал» – «Бобровый лог».
+                                            <br>
+                                            <br>
+                                            Разница во времени с г. Москва: + 4 часа.
+                                            <br>
+                                            <br>
+                                            <br>
+                                            Источник данных:
+                                            <br>
+                                            <a href="http://www.bobrovylog.ru/" rel="nofollow">
+                                                http://www.bobrovylog.ru/
+                                            </a>
+                                            <br>
+                                            <a href="http://www.ski.ru/static/419/" rel="nofollow">
+                                                http://www.ski.ru/static/419/
+                                            </a>
+
+                                        </p>
+
+                                    </td>
+                                    <td width="1" valign="top">
+
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div style="clear:both"></div>
+
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>>
+
+{% endblock %}
+
+{%block footer%}
 <footer class="py-5 bg-dark">
     <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Store 2022</p>
     </div>
     <!-- /.container -->
 </footer>
-
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+
 <!-- FontAwesome script -->
-<script src="vendor/fontawesome/fontawesome-icons.js" crossorigin="anonymous"></script>
-<script src="vendor/js/scroll_menu.js"></script>
+<script src="../vendor/fontawesome/fontawesome-icons.js"
+        crossorigin="anonymous"></script>
 
 </body>
 
 </html>
+{%endblock%}
+
+

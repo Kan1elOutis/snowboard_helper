@@ -18,12 +18,47 @@ class SnowboardsView(TitleMixin, TemplateView):
 
 
 class BootsView(TitleMixin, TemplateView):
-    template_name = 'equip/boots.html'
+    template_name = 'equip/equip.html'
     title = 'SibDoski'
 
 
-class BracingView(TitleMixin, TemplateView):
-    template_name = 'equip/bracing.html'
+class GlasesView(TitleMixin, TemplateView):
+    template_name = 'equip/glases.html'
+    title = 'SibDoski'
+
+
+class GlovesView(TitleMixin, TemplateView):
+    template_name = 'equip/gloves.html'
+    title = 'SibDoski'
+
+
+class KrasnoyarskView(TitleMixin, TemplateView):
+    template_name = 'places/krasnoyarsk.html'
+    title = 'SibDoski'
+
+
+class DivnogorskView(TitleMixin, TemplateView):
+    template_name = 'places/divnogorsk.html'
+    title = 'SibDoski'
+
+
+class SheregeshView(TitleMixin, TemplateView):
+    template_name = 'places/sheregesh.html'
+    title = 'SibDoski'
+
+
+class FreerideView(TitleMixin, TemplateView):
+    template_name = 'technique/freeride.html'
+    title = 'SibDoski'
+
+
+class CarvingView(TitleMixin, TemplateView):
+    template_name = 'technique/carving.html'
+    title = 'SibDoski'
+
+
+class FreestyleView(TitleMixin, TemplateView):
+    template_name = 'technique/freestyle.html'
     title = 'SibDoski'
 
 
