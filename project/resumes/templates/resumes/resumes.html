@@ -7,6 +7,8 @@
 {%endblock%}
 
 {%block content%}
+<div><h1><br></h1></div>
+
 <div class="container">
     <div class="row">
 
@@ -25,7 +27,7 @@
 
         <div class="col-lg-9">
 
-                <div class="row">
+            <div class="row">
                 {% for resume in object_list %}
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
@@ -36,13 +38,13 @@
                         </a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">{{ resume.first_name }}  {{ resume.last_name }}</a>
+                                <a href="#">{{ resume.first_name }} {{ resume.last_name }}</a>
                             </h4>
                             <h5>{{ resume.price }} руб.</h5>
                             <p class="card-text">{{ resume.description }}</p>
                         </div>
                         <div class="card-footer text-center">
-                            <a class="btn btn-outline-success" href="#win1">
+                            <a class="btn btn-outline-success" href="{% url 'resumes:resume_detail' resume.id %}">
                                 Подробнее
                             </a>
                         </div>
@@ -52,7 +54,11 @@
 
 
             </div>
-
+<div><h1><br></h1></div>
+<div><h1><br></h1></div>
+<div><h1><br></h1></div>
+<div><h1><br> <br></h1></div>
+<div><h1><br> <br></h1></div>
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item {% if not page_obj.has_previous %} disabled {%endif%}">
@@ -61,11 +67,11 @@
                            tabindex="-1" aria-disabled="true">Предыдущая</a>
                     </li>
                     {% for page in paginator.page_range %}
-                        <li class="page-item">
-                            <a class="page-link" href="{% url 'resumes:paginator' page %}">
-                                {{ page }}
-                            </a>
-                        </li>
+                    <li class="page-item">
+                        <a class="page-link" href="{% url 'resumes:paginator' page %}">
+                            {{ page }}
+                        </a>
+                    </li>
                     {% endfor%}
 
                     <li class="page-item {% if not page_obj.has_next %} disabled {% endif %}">
@@ -81,30 +87,13 @@
 
     </div>
 </div>
-    <div class="popup">
-</div>
-<a href="#x" class="overlay" id="win1"></a>
-        <div class="popup">
-            <div class="pic-left">
-                <a href="#"><img src="{% static 'vendor/img/test.jpeg' %}" alt="Тест" /></a>
-            </div>
-            <h2></h2>
-			<p>
-            <h2>Иван Иванов</h2>
-            <h3 style="text-align: center;">Цена за час - 3000 руб.</h3>
 
 
-			<p>
-			Имею большой опыт катания. Обучу технике катания грамотно и безболезненно.
-            Текст для массовкиТекст для массовкиТекст для массовкиТекст для массовки
-                Текст для массовкиТекст для массовкиТекст для массовкиТекст для массовкиТекст для массовки
-                Текст для массовкиТекст для массовкиТекст для массовки
-
-        </div>
 {%endblock%}
 
 
 {%block footer%}
+
 <footer class="py-5 bg-dark">
     <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Store 2022</p>

@@ -1,5 +1,7 @@
 from django.db import models
 
+from users.models import User
+
 
 class RidingStyle(models.Model):
     name = models.CharField(max_length=128, unique=True)
@@ -26,4 +28,15 @@ class Resume(models.Model):
         verbose_name_plural = 'resumes'
 
     def __str__(self):
-        return f'Резюме: {self.first_name} {self.last_name} | Стиль катания: {self.riding_style.name}'
+        return f'{self.first_name} {self.last_name} | {self.riding_style.name}'
+
+
+class Record(models.Model):
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE, default=1)
+    fio = models.CharField(max_length=256, default='Иванов Иван Иванович')
+    phone = models.IntegerField(null=False, unique=True)
+    date = models.DateTimeField()
+    instructor = models.ForeignKey(to=Resume, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Заказ у {self.instructor.first_name} {self.instructor.last_name} дата: {self.date}'

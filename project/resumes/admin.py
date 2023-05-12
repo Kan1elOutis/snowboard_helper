@@ -1,8 +1,9 @@
 from django.contrib import admin
 
-from resumes.models import Resume, RidingStyle
+from resumes.models import Resume, RidingStyle, Record
 
 admin.site.register(RidingStyle)
+admin.site.register(Record)
 
 
 @admin.register(Resume)

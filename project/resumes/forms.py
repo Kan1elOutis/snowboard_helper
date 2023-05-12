@@ -1,6 +1,11 @@
-from django import forms
+import datetime
 
-from resumes.models import Resume, RidingStyle
+
+from django import forms
+from django.forms import DateTimeInput
+from django.http import request
+
+from resumes.models import Resume, RidingStyle, Record
 
 
 class ResumeCreatingForm(forms.ModelForm):
@@ -26,3 +31,18 @@ class ResumeCreatingForm(forms.ModelForm):
     class Meta:
         model = Resume
         fields = ('first_name', 'last_name', 'description', 'price', 'image', 'riding_style')
+
+
+class OrderCreatingForm(forms.ModelForm):
+    fio = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control py-4', 'placeholder': 'Введите ФИО'
+    }))
+    phone = forms.IntegerField(widget=forms.TextInput(attrs={
+        'class': 'form-control py-4', 'placeholder': 'Введите номер'
+    }))
+    date = forms.DateTimeField(required=False, widget=DateTimeInput(attrs={'type': 'datetime-local'}),
+                               initial=datetime.date.today(), localize=True)
+
+    class Meta:
+        model = Record
+        fields = ('fio', 'phone', 'date', 'instructor')

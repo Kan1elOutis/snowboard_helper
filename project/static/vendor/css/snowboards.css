@@ -1,5 +1,6 @@
 body {
     padding-top: 56px;
+    text-align: left;
 }
 .b-container {
     margin: auto;
@@ -69,7 +70,15 @@ body {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+.card-img, .card-img-bottom, .card-img-top {
+  width: 50%;
+}
 
+.selected {
+	background-color: #f36f48;
+	font-weight: bold;
+	color: white;
+}
 
 h1,
 h2,

@@ -1317,7 +1317,7 @@ pre code {
   .col-lg-4 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    max-width: 100%;
   }
   .col-lg-5 {
     -ms-flex: 0 0 41.666667%;
@@ -4832,7 +4832,7 @@ input[type="button"].btn-block {
 .card-img-bottom {
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 100%;
+  width: 10%;
 }
 
 .card-img,

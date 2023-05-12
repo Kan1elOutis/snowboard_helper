@@ -65,7 +65,7 @@ class FreestyleView(TitleMixin, TemplateView):
 class ProductsListView(TitleMixin, ListView):
     model = Product
     template_name = 'products/products.html'
-    paginate_by = 1
+    paginate_by = 6
     title = 'SibDoski - Каталог'
 
     def get_queryset(self):

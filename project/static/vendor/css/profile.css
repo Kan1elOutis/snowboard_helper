@@ -1,21 +1,5 @@
 body {
-    background: url("../img/wallpaper.jpg") no-repeat center top fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    padding-top: 56px;
-}
-
-#start-purchase-btn {
-    background-color: #ffffff;
-    border-color: #ffffff;
-    color: white;
-}
-
-#start-purchase-link {
-    text-decoration: none;
-    color: white;
+    padding-top: 75px;
 }
 .navbar-dark .navbar-nav .nav-link {
     background-color: #343a40;
@@ -74,3 +58,22 @@ body {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+.col-lg-5 {
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 21.666667%;
+}
+.col-lg-3 {
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 5.666667%;
+}
+.col-lg-7 {
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 38.666667%;
+}
+.container {
+  max-width: 1640px;
+}
